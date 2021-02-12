@@ -84,7 +84,7 @@ namespace MsCrmTools.SynchronousEventOrderEditor
                     }
                     else
                     {
-                        var tvh = new TreeViewHelper(tvEvents);
+                        var tvh = new TreeViewHelper(tvEvents, chkLoadInternalEvents.Checked);
 
                         foreach (var sEvent in events)
                         {

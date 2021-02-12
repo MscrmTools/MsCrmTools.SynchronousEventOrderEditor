@@ -1,5 +1,4 @@
-﻿using Microsoft.Crm.Sdk.Messages;
-using Microsoft.Xrm.Sdk;
+﻿using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +23,7 @@ namespace MsCrmTools.SynchronousEventOrderEditor.AppCode
                 Stage = stageCode != null ? stageCode.Value : 40;
                 Message = "Create";
             }
-            else if (workflow.GetAttributeValue<bool>("triggeronupdate") || 
+            else if (workflow.GetAttributeValue<bool>("triggeronupdate") ||
                 !string.IsNullOrEmpty(workflow.GetAttributeValue<string>("triggeronupdateattributelist")))
             {
                 var stageCode = workflow.GetAttributeValue<OptionSetValue>("updatestage");
@@ -83,6 +82,7 @@ namespace MsCrmTools.SynchronousEventOrderEditor.AppCode
                 <attribute name='processorder' />
                 <attribute name='modifiedon' />
                 <attribute name='name' />
+                <attribute name='rank' />
                 <filter>
                     <condition attribute='mode' operator='eq' value='1' />
                     <condition attribute='type' operator='eq' value='1' />

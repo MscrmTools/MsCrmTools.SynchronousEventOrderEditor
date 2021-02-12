@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainControl));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
@@ -42,14 +44,15 @@
             this.dgvSynchronousEventType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSynchronousEventName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSynchronousDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.gbOptions = new System.Windows.Forms.GroupBox();
+            this.chkLoadInternalEvents = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSynchronousEvent)).BeginInit();
+            this.gbOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -62,30 +65,45 @@
             this.tsbUpdate});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1097, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1328, 46);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsbClose
+            // 
+            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
+            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Size = new System.Drawing.Size(34, 41);
+            this.tsbClose.Text = "Close this tool";
+            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // tsbLoadEvents
             // 
             this.tsbLoadEvents.Image = ((System.Drawing.Image)(resources.GetObject("tsbLoadEvents.Image")));
             this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbLoadEvents.Name = "tsbLoadEvents";
-            this.tsbLoadEvents.Size = new System.Drawing.Size(127, 29);
+            this.tsbLoadEvents.Size = new System.Drawing.Size(135, 29);
             this.tsbLoadEvents.Text = "Load events";
             this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // tsbUpdate
             // 
             this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(158, 29);
+            this.tsbUpdate.Size = new System.Drawing.Size(166, 29);
             this.tsbUpdate.Text = "Apply update(s)";
             this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
@@ -100,7 +118,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 32);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 134);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -111,8 +129,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvSynchronousEvent);
-            this.splitContainer1.Size = new System.Drawing.Size(1097, 732);
-            this.splitContainer1.SplitterDistance = 365;
+            this.splitContainer1.Size = new System.Drawing.Size(1328, 794);
+            this.splitContainer1.SplitterDistance = 440;
             this.splitContainer1.TabIndex = 2;
             // 
             // tvEvents
@@ -126,7 +144,7 @@
             this.tvEvents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tvEvents.Name = "tvEvents";
             this.tvEvents.SelectedImageIndex = 0;
-            this.tvEvents.Size = new System.Drawing.Size(357, 724);
+            this.tvEvents.Size = new System.Drawing.Size(748, 1163);
             this.tvEvents.TabIndex = 1;
             this.tvEvents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEvents_AfterSelect);
             // 
@@ -147,26 +165,32 @@
             this.dgvSynchronousEvent.Location = new System.Drawing.Point(3, 4);
             this.dgvSynchronousEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSynchronousEvent.Name = "dgvSynchronousEvent";
+            this.dgvSynchronousEvent.RowHeadersWidth = 62;
             this.dgvSynchronousEvent.RowTemplate.Height = 24;
-            this.dgvSynchronousEvent.Size = new System.Drawing.Size(721, 724);
+            this.dgvSynchronousEvent.Size = new System.Drawing.Size(1261, 1163);
             this.dgvSynchronousEvent.TabIndex = 0;
             this.dgvSynchronousEvent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellValueChanged);
             // 
             // dgvSynchronousEventRank
             // 
             this.dgvSynchronousEventRank.HeaderText = "Rank";
+            this.dgvSynchronousEventRank.MinimumWidth = 8;
             this.dgvSynchronousEventRank.Name = "dgvSynchronousEventRank";
+            this.dgvSynchronousEventRank.Width = 150;
             // 
             // dgvSynchronousEventType
             // 
             this.dgvSynchronousEventType.FillWeight = 150F;
             this.dgvSynchronousEventType.HeaderText = "Type";
+            this.dgvSynchronousEventType.MinimumWidth = 8;
             this.dgvSynchronousEventType.Name = "dgvSynchronousEventType";
             this.dgvSynchronousEventType.ReadOnly = true;
+            this.dgvSynchronousEventType.Width = 150;
             // 
             // dgvSynchronousEventName
             // 
             this.dgvSynchronousEventName.HeaderText = "Name";
+            this.dgvSynchronousEventName.MinimumWidth = 8;
             this.dgvSynchronousEventName.Name = "dgvSynchronousEventName";
             this.dgvSynchronousEventName.ReadOnly = true;
             this.dgvSynchronousEventName.Width = 300;
@@ -174,24 +198,31 @@
             // dgvSynchronousDescription
             // 
             this.dgvSynchronousDescription.HeaderText = "Description";
+            this.dgvSynchronousDescription.MinimumWidth = 8;
             this.dgvSynchronousDescription.Name = "dgvSynchronousDescription";
             this.dgvSynchronousDescription.ReadOnly = true;
             this.dgvSynchronousDescription.Width = 400;
             // 
-            // tsbClose
+            // gbOptions
             // 
-            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
-            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(23, 29);
-            this.tsbClose.Text = "Close this tool";
-            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
+            this.gbOptions.Controls.Add(this.chkLoadInternalEvents);
+            this.gbOptions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbOptions.Location = new System.Drawing.Point(0, 55);
+            this.gbOptions.Name = "gbOptions";
+            this.gbOptions.Size = new System.Drawing.Size(1107, 66);
+            this.gbOptions.TabIndex = 3;
+            this.gbOptions.TabStop = false;
+            this.gbOptions.Text = "Options";
             // 
-            // toolStripSeparator2
+            // chkLoadInternalEvents
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
+            this.chkLoadInternalEvents.AutoSize = true;
+            this.chkLoadInternalEvents.Location = new System.Drawing.Point(6, 31);
+            this.chkLoadInternalEvents.Name = "chkLoadInternalEvents";
+            this.chkLoadInternalEvents.Size = new System.Drawing.Size(178, 24);
+            this.chkLoadInternalEvents.TabIndex = 0;
+            this.chkLoadInternalEvents.Text = "Load internal events";
+            this.chkLoadInternalEvents.UseVisualStyleBackColor = true;
             // 
             // MainControl
             // 
@@ -199,10 +230,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.gbOptions);
             this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainControl";
-            this.Size = new System.Drawing.Size(1097, 764);
+            this.Size = new System.Drawing.Size(1107, 774);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -210,6 +242,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSynchronousEvent)).EndInit();
+            this.gbOptions.ResumeLayout(false);
+            this.gbOptions.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +265,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousDescription;
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.GroupBox gbOptions;
+        private System.Windows.Forms.CheckBox chkLoadInternalEvents;
     }
 }

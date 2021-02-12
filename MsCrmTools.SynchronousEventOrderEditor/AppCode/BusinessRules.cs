@@ -1,5 +1,4 @@
-﻿using Microsoft.Crm.Sdk.Messages;
-using Microsoft.Xrm.Sdk;
+﻿using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using System;
 using System.Collections.Generic;
@@ -54,6 +53,7 @@ namespace MsCrmTools.SynchronousEventOrderEditor.AppCode
                 <attribute name='processorder' />
                 <attribute name='modifiedon' />
                 <attribute name='name' />
+                <attribute name='rank' />
                 <filter>
                     <condition attribute='type' operator='eq' value='1' />
                     <condition attribute='category' operator='eq' value='2' />
