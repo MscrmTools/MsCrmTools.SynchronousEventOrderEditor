@@ -1,4 +1,4 @@
-﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk;
 
 namespace MsCrmTools.SynchronousEventOrderEditor.AppCode
 {

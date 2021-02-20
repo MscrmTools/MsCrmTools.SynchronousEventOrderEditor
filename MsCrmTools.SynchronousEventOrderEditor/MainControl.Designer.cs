@@ -1,4 +1,4 @@
-﻿namespace MsCrmTools.SynchronousEventOrderEditor
+namespace MsCrmTools.SynchronousEventOrderEditor
 {
     partial class MainControl
     {

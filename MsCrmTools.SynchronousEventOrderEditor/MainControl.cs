@@ -1,4 +1,4 @@
-﻿using Microsoft.Xrm.Sdk.Query;
+using Microsoft.Xrm.Sdk.Query;
 using MsCrmTools.SynchronousEventOrderEditor.AppCode;
 using System;
 using System.Collections.Generic;
