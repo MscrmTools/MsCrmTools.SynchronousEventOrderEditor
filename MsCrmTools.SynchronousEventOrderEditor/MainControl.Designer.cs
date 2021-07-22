@@ -82,28 +82,28 @@ namespace MsCrmTools.SynchronousEventOrderEditor
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 46);
             // 
             // tsbLoadEvents
             // 
             this.tsbLoadEvents.Image = ((System.Drawing.Image)(resources.GetObject("tsbLoadEvents.Image")));
             this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbLoadEvents.Name = "tsbLoadEvents";
-            this.tsbLoadEvents.Size = new System.Drawing.Size(135, 29);
+            this.tsbLoadEvents.Size = new System.Drawing.Size(127, 41);
             this.tsbLoadEvents.Text = "Load events";
             this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
             // 
             // tsbUpdate
             // 
             this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(166, 29);
+            this.tsbUpdate.Size = new System.Drawing.Size(158, 41);
             this.tsbUpdate.Text = "Apply update(s)";
             this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
@@ -135,16 +135,14 @@ namespace MsCrmTools.SynchronousEventOrderEditor
             // 
             // tvEvents
             // 
-            this.tvEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tvEvents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvEvents.ImageIndex = 0;
             this.tvEvents.ImageList = this.ilEventTreeNode;
-            this.tvEvents.Location = new System.Drawing.Point(3, 4);
+            this.tvEvents.Location = new System.Drawing.Point(0, 0);
             this.tvEvents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tvEvents.Name = "tvEvents";
             this.tvEvents.SelectedImageIndex = 0;
-            this.tvEvents.Size = new System.Drawing.Size(748, 1163);
+            this.tvEvents.Size = new System.Drawing.Size(440, 794);
             this.tvEvents.TabIndex = 1;
             this.tvEvents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEvents_AfterSelect);
             // 
